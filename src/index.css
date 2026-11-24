@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 45 106 79; /* #2D6A4F */
+    --primary-light: 80 158 121; /* #509E79 */
+    --primary-dark: 29 84 63; /* #1D543F */
+    --secondary: 64 145 108; /* #40916C */
+    --accent: 119 73 54; /* #774936 */
+    --background: 249 250 251; /* #F9FAFB */
+    --foreground: 15 23 42; /* #0F172A */
+    --success: 34 197 94; /* #22C55E */
+    --warning: 234 179 8; /* #EAB308 */
+    --error: 239 68 68; /* #EF4444 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-primary hover:bg-primary-dark focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply text-white bg-secondary hover:bg-primary focus:ring-secondary;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .card {
+    @apply overflow-hidden bg-white rounded-lg shadow-sm transition-all hover:shadow-md;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-sm font-medium rounded-md transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(64, 145, 108, 0.2) 0%, rgba(45, 106, 79, 0.4) 100%);
+  }
+}
+
+/* Animations */
+.animate-leaf-sway {
+  animation: leaf-sway 5s ease-in-out infinite;
+}
+
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.animate-grow {
+  animation: grow 0.5s ease-out;
+}
+
+@keyframes grow {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

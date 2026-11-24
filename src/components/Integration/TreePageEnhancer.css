@@ -1,0 +1,22 @@
+.tree-page-social {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.social-engagement {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .social-engagement {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

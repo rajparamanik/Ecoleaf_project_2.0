@@ -1,0 +1,14 @@
+# Redirect /buy to /buy-sell and enable SPA fallback for client-side routing.
+
+[[redirects]]
+  from = "/buy"
+  to = "/buy-sell"
+  status = 301
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
